@@ -1,0 +1,40 @@
+
+.container {
+      margin-left: 1rem;
+      padding: 20px;
+      padding-top: 50px;
+      margin-top: 12px;
+      height: 7.5in;
+      width: 12.8in;
+      background: white;  
+      box-shadow: 0 5px 20px #0001;
+      border-radius: 10px;
+}
+
+.table-info {
+      margin-top: 0.3in;
+}
+
+table {
+      border-collapse:  separate;
+      border-spacing: 0 0.6rem;
+}
+
+table tbody tr {
+      background:  white;
+      box-shadow: 0 5px 20px #0001;
+}
+
+.drop-down-active select {
+
+      width: 100px;
+      background-color: transparent;
+      height: 40px;
+      border-radius: 5px;
+      margin-right: 20px;
+      color: darkgreen;
+      padding: 10px;
+      border: none;
+
+}
+
