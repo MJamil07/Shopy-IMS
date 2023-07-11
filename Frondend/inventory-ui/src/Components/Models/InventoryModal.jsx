@@ -38,7 +38,7 @@ const InventoryModal = ({
 
   useEffect(()=> {
 
-    axios.get('http://localhost:9090/api/v1/product/getAllSKU')
+    axios.get('https://shopy-ims-api.vercel.app/api/v1/product/getAllSKU')
         .then(res => setSkuCodes(res.data))
         .catch(err => console.log(err))
 
@@ -88,7 +88,7 @@ const InventoryModal = ({
       e.preventDefault()
 
       if(addOrEdit === 'add') {
-        axios.post('http://localhost:9090/api/v1/inventory/add/' ,
+        axios.post('https://shopy-ims-api.vercel.app/api/v1/inventory/add/' ,
                   {
                     SKU_CODE : skuCode ,
                     quantity ,
@@ -104,7 +104,7 @@ const InventoryModal = ({
       }
 
       if(addOrEdit === 'edit') {
-        axios.patch(`http://localhost:9090/api/v1/inventory/update/${id}` , 
+        axios.patch(`https://shopy-ims-api.vercel.app/api/v1/inventory/update/${id}` , 
           {
               SKU_CODE : skuCode ,
               quantity ,
