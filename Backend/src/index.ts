@@ -2,6 +2,6 @@
 import app from "./app";
 
 app.listen(8989 , ()=> {
-      console.log('SERVER IS LISTENING');
+      console.log('SERVER IS LISTENING SUCCESSFULLY');
       
 })
