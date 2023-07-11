@@ -29,16 +29,16 @@ export default function Inventory() {
   useEffect(()=> {
 
       //  get all inventories details
-      axios.get('http://localhost:9090/api/v1/inventory/show')
+      axios.get('https://shopy-ims-api.vercel.app/api/v1/inventory/show')
            .then(res => {setInventories(res.data)})
 
       // get each location how many products available
-      axios.get('http://localhost:9090/api/v1/inventory/locationProductCount')
+      axios.get('https://shopy-ims-api.vercel.app/api/v1/inventory/locationProductCount')
           .then(res => setLocationTotalproduct(res.data))
           .catch(err => console.log(err))
 
       // get each warhouse how many product are available
-      axios.get('http://localhost:9090/api/v1/inventory/warhouseProductCount')
+      axios.get('https://shopy-ims-api.vercel.app/api/v1/inventory/warhouseProductCount')
           .then(res => setWarhouseTotalproduct(res.data))
           .catch(err => console.log(err))
 
@@ -47,7 +47,7 @@ export default function Inventory() {
 
   function search() {
 
-      let url = 'http://localhost:9090/api/v1/inventory'
+      let url = 'https://shopy-ims-api.vercel.app/api/v1/inventory'
     
       if(searchQuery.substring(0 , 8) === 'WARHOUSE') {
           url += `/search?warehouse=${searchQuery}`
@@ -74,7 +74,7 @@ export default function Inventory() {
         title : 'Are You Sure Delete ?' ,
         icon : <DeleteOutlined /> ,
         onOk : () => {
-            axios.delete(`http://localhost:9090/api/v1/inventory/delete/${id}`)
+            axios.delete(`https://shopy-ims-api.vercel.app/api/v1/inventory/delete/${id}`)
               .then(result => {
                 setReload(!reload)
                 popUpNotify('Deleted Status' , 'Successfully Deleted' , api.success)
