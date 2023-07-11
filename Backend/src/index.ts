@@ -1,7 +1,7 @@
 
 import app from "./app";
 
-app.listen(9090 , ()=> {
+app.listen(8989 , ()=> {
       console.log('SERVER IS LISTENING');
       
 })
