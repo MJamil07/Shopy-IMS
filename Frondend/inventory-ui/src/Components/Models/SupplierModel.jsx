@@ -59,7 +59,7 @@ const SupplierModel = ({
 
     if(optionName === 'Edit') {
 
-      axios.patch(`http://localhost:9090/api/v1/supplier/update/${id}` , supplier)
+      axios.patch(`https://shopy-ims-api.vercel.app/api/v1/supplier/update/${id}` , supplier)
             .then(res => {
                   setReload(!reload)
                   popUpNotification("Updated Status" , "Successfully Updaded" , api.success)
@@ -72,7 +72,7 @@ const SupplierModel = ({
     else {
 
       console.log(supplier);
-      axios.post('http://localhost:9090/api/v1/supplier/add' , supplier)
+      axios.post('https://shopy-ims-api.vercel.app/api/v1/supplier/add' , supplier)
             .then(res => { 
                         popUpNotification("Added Status" , "Successfully Added" , api.success)
                         cleanUptheState()
