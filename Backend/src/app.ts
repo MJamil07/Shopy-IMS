@@ -34,10 +34,4 @@ app.use('*' , (_req , response) => {
       response.status(404).json({'message' : `url = ${ _req.hostname + _req.baseUrl + _req.url} , method = ${_req.method} , Not Found`})
 })
 
-
-
-app.listen(9090 , ()=> {
-      console.info('Server is Started')
-})
-
 export default app;
