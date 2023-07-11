@@ -19,7 +19,7 @@ export default function Supplier() {
 
   useEffect(() => {
 
-      let url = "http://localhost:9090/api/v1/supplier/";
+      let url = "https://shopy-ims-api.vercel.app/api/v1/supplier/";
 
       if (supplierActiveOrInActive === "active") {
         url += 'getActiveSupplier';
@@ -34,8 +34,8 @@ export default function Supplier() {
 
   const search = () => {
     const url = searchByName.trim()
-      ? `http://localhost:9090/api/v1/supplier/search?name=${searchByName.trim()}`
-      : `http://localhost:9090/api/v1/supplier/show`;
+      ? `https://shopy-ims-api.vercel.app/api/v1/supplier/search?name=${searchByName.trim()}`
+      : `https://shopy-ims-api.vercel.app/api/v1/supplier/show`;
 
     axios.get(url).then((res) => {
       setSuppliersData(res.data);
@@ -60,7 +60,7 @@ export default function Supplier() {
           
           let data = { _id , isActive : status === 'true' ? true : false}
           const description = status === 'true' ? 'Active' : 'In-Active'
-          axios.post('http://localhost:9090/api/v1/supplier/updateSupplierActiveStatus' , data)
+          axios.post('https://shopy-ims-api.vercel.app/api/v1/supplier/updateSupplierActiveStatus' , data)
                 .then(result => {
                     console.log(result);
                     setReload(!reload)
@@ -90,7 +90,7 @@ export default function Supplier() {
       icon: <ExclamationCircleFilled />,
       onOk() {
         axios
-          .delete(`http://localhost:9090/api/v1/supplier/delete/${id}`)
+          .delete(`https://shopy-ims-api.vercel.app/api/v1/supplier/delete/${id}`)
           .then((res) => {
             setReload(!reload);
             popUpNotification(
