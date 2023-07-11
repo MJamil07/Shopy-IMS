@@ -2,9 +2,10 @@
   "name": "inventory-management-system",
   "version": "1.0.0",
   "description": "Develop the Inventory management System Store the Product in warehouse",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node ./src/app.ts" ,
+    "start": "ts-node src/app.ts" ,
+    "dev" : "nodemon src/app.ts",
     "vercel-build" : "echo Hello"
   },
   "author": "@jamilsde",
