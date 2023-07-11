@@ -19,6 +19,8 @@ app.use(cors())
 // connect the mongodb
 connectToDB()
 
+app.get('/', (req, res) => {res.json('Hello World')})
+
 // supplier routers
 app.use('/api/v1/supplier' , supplierRouter)
 
