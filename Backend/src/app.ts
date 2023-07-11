@@ -13,7 +13,13 @@ console.log("RUNNING")
 
 app.use(express.json())
 app.use(express.urlencoded({extended : true}))
-app.use(cors())
+app.use(cors(
+      {
+            origin : ["https://shopy-ims-client.vercel.app/"],
+            methods : ["POST" , "GET" , "PATCH" , "DELETE" , "PUT"],
+            credentials : true
+      }
+))
 
 // connect the mongodb
 connectToDB()
