@@ -9,7 +9,7 @@ import inventoryRouter from './routes/inventory.routes'
 
 
 const app = express()
-console.log("RUNNING" , app)
+console.log("RUNNING")
 
 app.use(express.json())
 app.use(express.urlencoded({extended : true}))
