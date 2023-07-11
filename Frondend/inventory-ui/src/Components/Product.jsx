@@ -41,26 +41,26 @@ export default function Product() {
   useEffect(()=> {
 
     // get all active products
-    axios.get('http://localhost:9090/api/v1/product/getActiveProduct')
+    axios.get('https://shopy-ims-api.vercel.app/api/v1/product/getActiveProduct')
           .then(res => {
               setProducts(res.data)
             })
 
     // get suppliers sell total cost 
-    axios.get('http://localhost:9090/api/v1/product/supplierCost/')
+    axios.get('https://shopy-ims-api.vercel.app/api/v1/product/supplierCost/')
           .then(res =>{ 
               setSuppliersCost(res.data)
             })
 
     //  get each brand how many product available
-    axios.get('http://localhost:9090/api/v1/product/brandCount/')
+    axios.get('https://shopy-ims-api.vercel.app/api/v1/product/brandCount/')
         .then(res =>{ 
             setBrandCount(res.data)
           })
 
     // get retail and cost total Price
 
-    axios.get('http://localhost:9090/api/v1/product/getTotalOfRetailAndCost/')
+    axios.get('https://shopy-ims-api.vercel.app/api/v1/product/getTotalOfRetailAndCost/')
           .then(res => {
               setSumOfRetailAndCostPrice(res.data[0])
           })
@@ -85,7 +85,7 @@ export default function Product() {
       title : ' Are you confirm to delete the Product ?' ,
       icon : <ExclamationCircleFilled />,
       onOk(){
-        axios.delete(`http://localhost:9090/api/v1/product/delete/${id}`)
+        axios.delete(`https://shopy-ims-api.vercel.app/api/v1/product/delete/${id}`)
           .then(res => {
             setReload(!reload)
             api.success({message : 'Product Deleted Or Not ?' , description : 'Successfully Product is Deleted ..!'})
