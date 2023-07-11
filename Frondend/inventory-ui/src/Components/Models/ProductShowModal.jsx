@@ -15,7 +15,7 @@ export default () => {
             e.preventDefault();
 
                   // fetch api for product in skucode
-            const url = `http://localhost:9090/api/v1/product/getProductCode/${skuCode}`;
+            const url = `https://shopy-ims-api.vercel.app/api/v1/product/getProductCode/${skuCode}`;
 
             axios.get(url)
                   .then(result => {
