@@ -4,7 +4,7 @@
   "description": "Develop the Inventory management System Store the Product in warehouse",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./src/app.ts"
+    "dev": "node ./src/app.ts"
   },
   "author": "@jamilsde",
   "license": "ISC",
