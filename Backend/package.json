@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Develop the Inventory management System Store the Product in warehouse",
   "main": "app.js",
-  "engines" : { "node" : "18.x" },
   "scripts": {
     "start": "node ./src/app.ts" ,
     "vercel-build" : "echo hello"
