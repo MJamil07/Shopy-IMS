@@ -1,7 +1,9 @@
 import express from 'express'
 import connectToDB from './configuration/mongo.confiq'
 import cors from 'cors'
+import { config } from 'dotenv'
 
+config()
 // routers
 import supplierRouter from './routes/supplier.routes'
 import productRouter from './routes/product.routes'
@@ -33,6 +35,6 @@ app.use('*' , (_req , response) => {
 
 
 
-app.listen(9090 , ()=> {
-      console.info('Server is Started')
+app.listen(process.env.PORT || 9090 , ()=> {
+      console.info('Server is Started' , process.env.PORT)
 })

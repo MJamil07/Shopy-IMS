@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 const connectToDB = async () => {
 
       await mongoose
-      .connect('mongodb://127.0.0.1:27017/InventoryManagementSystem' , {retryWrites : true , w : "majority" })
+      .connect('mongodb+srv://root:root@web-app.qfkecpv.mongodb.net/inventory-management' , {retryWrites : true , w : "majority" })
       .then(()=>{
             console.log('DB is Connected');
       })
