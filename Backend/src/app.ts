@@ -38,3 +38,5 @@ app.use('*' , (_req , response) => {
 app.listen(process.env.PORT || 9090 , ()=> {
       console.info('Server is Started' , process.env.PORT)
 })
+
+export default app;
