@@ -30,13 +30,13 @@ const Navigation = () => {
 
         switch(key) {
             case '1' :
-              return window.location.assign('http://localhost:3000/')
+              return window.location.assign('https://shopy-ims-client.vercel.app/')
 
             case '2' :
-              return window.location.assign('http://localhost:3000/supplier')
+              return window.location.assign('https://shopy-ims-client.vercel.app/supplier')
 
             case '3' :
-              return window.location.assign('http://localhost:3000/product')
+              return window.location.assign('https://shopy-ims-client.vercel.app/product')
 
         }
     }
