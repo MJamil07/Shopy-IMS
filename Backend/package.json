@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Develop the Inventory management System Store the Product in warehouse",
   "main": "index.js",
+  "engines" : { "node" : "14.x" },
   "scripts": {
-    "dev": "node ./src/app.ts"
+    "start": "node ./src/app.ts"
   },
   "author": "@jamilsde",
   "license": "ISC",
