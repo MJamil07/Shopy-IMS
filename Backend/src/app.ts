@@ -15,7 +15,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended : true}))
 app.use(cors(
       {
-            origin : ["https://shopy-ims-client.vercel.app"],
+            origin : ["*"],
             methods : ["POST" , "GET" , "PATCH" , "DELETE" , "PUT"],
             credentials : true
       }
