@@ -27,7 +27,7 @@ export default function Supplier() {
         url += 'getDisActiveSupplier'
       }
     
-     console.log(url);
+     console.log("url = " + url);
     
       axios.get(url).then((res) => {
         setSuppliersData(res.data);
