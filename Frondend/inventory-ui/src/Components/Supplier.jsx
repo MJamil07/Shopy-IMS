@@ -17,12 +17,12 @@ export default function Supplier() {
     useState("active");
   const [api, contextHolder] = notification.useNotification();
 
-  axios.defaults.withCredentials = true; 
+  axios.defaults.withCredentials = true;
   
   useEffect(() => {
 
       let url = "https://shopy-ims-api.vercel.app/api/v1/supplier/";
-
+      console.log(url);
       if (supplierActiveOrInActive === "active") {
         url += 'getActiveSupplier';
       } else {
