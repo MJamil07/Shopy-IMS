@@ -61,7 +61,8 @@ const SupplierModel = ({
 
       axios.patch(`https://shopy-ims-api.vercel.app/api/v1/supplier/update/${id}` , supplier)
             .then(res => {
-                  popUpNotification("Updated Status" , "Successfully Updaded" , api.success)        
+                  popUpNotification("Updated Status" , "Successfully Updaded" , api.success);
+                  setReload(!reload);
             })
             .catch(err => popUpNotification("Updated Status" , " Invalid Data ? " , api.error))
 
@@ -71,14 +72,15 @@ const SupplierModel = ({
       console.log(supplier);
       axios.post('https://shopy-ims-api.vercel.app/api/v1/supplier/add' , supplier)
             .then(res => { 
-                        popUpNotification("Added Status" , "Successfully Added" , api.success)
-                        cleanUptheState()         
+                         popUpNotification("Added Status" , "Successfully Added" , api.success);
+                         setReload(!reload);
+                         cleanUptheState()         
                   })
             .catch(err => popUpNotification("Added Status" , " Email is Already Exist !!" , api.error))
 
     }
 
-    setReload(!reload);
+   
 
   };
 
