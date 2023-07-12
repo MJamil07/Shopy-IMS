@@ -17,7 +17,7 @@ export default function Supplier() {
     useState("active");
   const [api, contextHolder] = notification.useNotification();
 
-  axios.defaults.withCredentials = true;
+  axios.defaults.withCredentials = true; 
   
   useEffect(() => {
 
