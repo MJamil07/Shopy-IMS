@@ -16,22 +16,23 @@ export default function Supplier() {
   const [supplierActiveOrInActive, setSupplierActiveOrInActive] =
     useState("active");
   const [api, contextHolder] = notification.useNotification();
-
-  axios.defaults.withCredentials = true;
   
   useEffect(() => {
 
       let url = "https://shopy-ims-api.vercel.app/api/v1/supplier/";
-      console.log(url);
+     
       if (supplierActiveOrInActive === "active") {
         url += 'getActiveSupplier';
-      } else {
-        
+      } else {   
         url += 'getDisActiveSupplier'
       }
+    
+     console.log(url);
+    
       axios.get(url).then((res) => {
         setSuppliersData(res.data);
       });
+    
   }, [reload , supplierActiveOrInActive]);
 
   const search = () => {
