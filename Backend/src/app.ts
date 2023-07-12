@@ -13,13 +13,7 @@ console.log("RUNNING")
 
 app.use(express.json())
 app.use(express.urlencoded({extended : true}))
-app.use(cors(
-      {
-            origin : "*",
-            methods : ["POST" , "GET" , "PATCH" , "DELETE" , "PUT"],
-            credentials : true
-      }
-))
+app.use(cors())
 
 // connect the mongodb
 connectToDB()
