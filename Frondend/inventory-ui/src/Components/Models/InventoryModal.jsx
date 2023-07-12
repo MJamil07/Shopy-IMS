@@ -119,6 +119,7 @@ const InventoryModal = ({
       }
 
       setIsButtonDisable(true)
+      setOpen(false)
 
   }
   return (
